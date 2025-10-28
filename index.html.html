@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Emanuel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    nav.navbar {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .bio {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: #e9ecef;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    footer {
+      background: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    img.perfil {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #343a40;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    /* ======= FORMULARIO DE CONTACTO ======= */
+    .contact-form {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .form-label {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      border: 1px solid #ced4da;
+      padding: 10px;
+    }
+
+    .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 5px rgba(13,110,253,0.3);
+    }
+
+    .btn-enviar {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    .btn-enviar:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Emanuel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobremi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section id="inicio" class="animate__animated animate__fadeIn">
+    <img src="Captura de pantalla 2025-09-02 152129.png" alt="Foto de perfil" class="perfil">
+    <h1>hola soy Ema</h1>
+    <p class="bio">soy un estudiante entusiasta de informática apasionado por la tecnología, la programación y la creacion de java script </p>
+  </section>
+
+  
+  <section id="proyectos" style="background-color:#ffffff;">
+    <h2> Proyectos</h2>
+    <p>Algunos de mis proyectos recientes incluyen:</p>
+    <ul class="list-unstyled">
+      <li> App en App Inventor: <strong>Eye on Crime</strong> — aplicación para reportar incidentes en tiempo real.</li>
+      <li> Proyecto de investigación sobre tecnología y derecho.</li>
+    </ul>
+  </section>
+
+  
+  <section id="sobremi">
+    <h2> Habilidades</h2>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Trabajo en equipo</span>
+      <span class="skill">Comunicación</span>
+      <span class="skill">Resolución de problemas</span>
+    </div>
+  </section>
+
+  
+  <section id="contacto">
+    <h2> Contacto</h2>
+    <p>Completá el siguiente formulario para ponerte en contacto conmigo:</p>
+
+    <form id="formContacto" class="contact-form">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre completo</label>
+        <input type="text" id="nombre" class="form-control" placeholder="Tu nombre completo">
+        <div id="errorNombre" class="error"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" id="correo" class="form-control" placeholder="ejemplo@correo.com">
+        <div id="errorCorreo" class="error"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea id="mensaje" class="form-control" rows="4" placeholder="Escribí tu mensaje..."></textarea>
+        <div id="errorMensaje" class="error"></div>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Emanuel | Desarrollado con amor y dedicación.</p>
+  </footer>
+
+  <script>
+    document.getElementById("formContacto").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let nombre = document.getElementById("nombre").value.trim();
+      let correo = document.getElementById("correo").value.trim();
+      let mensaje = document.getElementById("mensaje").value.trim();
+
+      let errorNombre = document.getElementById("errorNombre");
+      let errorCorreo = document.getElementById("errorCorreo");
+      let errorMensaje = document.getElementById("errorMensaje");
+
+    
+      errorNombre.textContent = "";
+      errorCorreo.textContent = "";
+      errorMensaje.textContent = "";
+
+      let valido = true;
+
+      
+      if (nombre.length < 3) {
+        errorNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
+        valido = false;
+      }
+
+      
+      let patronCorreo = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!patronCorreo.test(correo)) {
+        errorCorreo.textContent = "Ingrese un correo electrónico válido.";
+        valido = false;
+      }
+
+      
+      if (mensaje.length < 10) {
+        errorMensaje.textContent = "El mensaje debe tener al menos 10 caracteres.";
+        valido = false;
+      }
+
+      if (valido) {
+        alert("✅ Formulario enviado correctamente.");
+        document.getElementById("formContacto").reset();
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
